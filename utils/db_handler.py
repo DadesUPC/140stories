@@ -5,18 +5,9 @@ from .models import *
 from .values import *
 
 def IDExists(id):
-	query = Story.query.get(id)
+	query = Story.query.filter_by(story_id=id).first()
 	return (query==None)
 
-def newStory(title, text):
-	story = Story(title, text)
-	db.session.add(story)
-	db.session.commit()
-
-def addTextToStory(id, text):
-	story = Story.query.get(id)
-	story.full_text+=text
-	db.session.commit()
 
 def createID(length = 6):
 	ret = ""
@@ -29,3 +20,15 @@ def createID(length = 6):
 			n += 97
 		ret = ret[:i] + str(chr(n)) + ret[i + 1:]
 	return ret
+
+
+def newStory(title, text):
+	story_id = createID()
+	story = Story(title, text, story_id)
+	db.session.add(story)
+	db.session.commit()
+
+def addTextToStory(id, text):
+	story = Story.query.get(id)
+	story.full_text+=text
+	db.session.commit()

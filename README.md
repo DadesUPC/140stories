@@ -2,7 +2,7 @@
 Collaborative stories
 
 ## Download
-` https://github.com/DadesUPC/140stories `
+`git clone https://github.com/DadesUPC/140stories `
 
 ## Intall requirements
 

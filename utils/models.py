@@ -1,4 +1,5 @@
 from main import app, db
+from . import db_handler
 
 class Story(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
@@ -8,6 +9,7 @@ class Story(db.Model):
 	def __init__(self, full_text, title):
 		self.full_text = full_text
 		self.title = title
+		self.id = db_handler.createID()
 
 class Tweet(db.Model):
 	id = db.Column(db.Integer, primary_key=True)

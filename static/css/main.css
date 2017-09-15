@@ -32,7 +32,7 @@ html{
 	margin-left: auto;
 }
 
-.main-buttons button{
+.main-buttons a{
 	margin-right: 2%;
 	margin-left: 2%;
 }

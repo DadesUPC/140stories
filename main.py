@@ -19,3 +19,15 @@ db.create_all()
 @app.route('/')
 def home():
 	return render_template('index.html')
+
+@app.route('/newstory/', methods=['GET', 'POST'])
+def newstory():
+	if request.method=="POST":
+		pass
+	return render_template('newstory.html')
+
+
+
+@app.route('/continue/')
+def continueStory():
+	return render_template('continue.html')

@@ -7,13 +7,10 @@ html{
 	min-height: 100%;
 }
 
-.container{
-	max-height: 99%;
-}
-
 .content{
 }
 
+/*
 @-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
@@ -21,12 +18,12 @@ html{
     border-right: .05em solid black;
     width: 16em; 
     width: 12ch;
-    margin: 0.5em 0.25em;
     white-space: nowrap;
     overflow: hidden;
     -webkit-animation: typing 1s steps(12, end),
-               blink-caret 0.25s step-end infinite alternate;
+               blink-caret 0.5s step-end infinite alternate;
 }
+*/
 
 .main-buttons{
 	margin-top: 10%;

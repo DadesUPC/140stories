@@ -2,6 +2,7 @@ from main import app, db
 
 class Story(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
+	title = db.Column(db.String(140))
 	full_text = db.Column(db.Text)
 
 	def __init__(self, full_text):

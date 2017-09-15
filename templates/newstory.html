@@ -8,11 +8,11 @@
 		<form action="/newstory/" method="post" id="newstory_form">
 			<div class="six columns column">
 				<!--<label for="title">Story title:</label>!-->
-				<input class="u-full-width" name="title" type="text" placeholder="Title Here  -_-" required>
+				<input class="u-full-width" name="title" type="text" placeholder="The tale of Sir Francis Drake" maxlength="60" spellcheck="false" required>
 				<br>
 				<!--<label for="tweet">Now, start your story:</label>!-->
 				<br>
-  				<textarea rows="10" charswidth="23" name="text" class="u-full-width" placeholder="Once upon a time..." id="text" required></textarea>
+  				<textarea rows="10" charswidth="23" name="text" class="u-full-width" placeholder="Once upon a time..." id="text" maxlength="140" spellcheck="false" required></textarea>
   				<br>
 				<input class="button-primary" type="submit" value="Submit">
 			</div>

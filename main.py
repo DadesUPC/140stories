@@ -22,10 +22,12 @@ def home():
 
 @app.route('/newstory/', methods=['GET', 'POST'])
 def newstory():
-	if request.method=="POST":
-		pass
+	if request.method=='POST':
+		title = request.form['title']
+		text = request.form['text']
+		db_handler.newStory(title, text)
+		return render_template('index.html')
 	return render_template('newstory.html')
-
 
 @app.route('/continue/')
 def continueStory():

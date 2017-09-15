@@ -1,8 +1,22 @@
 from sqlalchemy import or_
+from random import randint
 from main import app,db
 from .models import *
 from .values import *
-from random import randint
+
+def IDExists(id):
+	query = Story.query.get(id)
+	return (query==None)
+
+def newStory(title, text):
+	story = Story(title, text)
+	db.session.add(story)
+	db.session.commit()
+
+def addTextToStory(id, text):
+	story = Story.query.get(id)
+	story.full_text+=text
+	db.session.commit()
 
 def createID(length = 6):
 	ret = ""
@@ -15,7 +29,3 @@ def createID(length = 6):
 			n += 97
 		ret = ret[:i] + str(chr(n)) + ret[i + 1:]
 	return ret
-
-def IDExists(id):
-	query = Story.query.get(id)
-	return (query==None)

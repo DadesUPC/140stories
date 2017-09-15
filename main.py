@@ -29,6 +29,12 @@ def newstory():
 		return render_template('index.html')
 	return render_template('newstory.html')
 
-@app.route('/continue/')
-def continueStory():
-	return render_template('continue.html')
+@app.route('/continue/<id>/')
+def continueStory(id):
+	if id=='0':
+		print("0")
+		story = db_handler.getRandomStory()
+		return redirect('/continue/'+story.story_id+'/')
+	else:
+		story = db_handler.getStoryByID(id)
+	return render_template('continue.html', story=story)

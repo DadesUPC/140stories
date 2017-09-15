@@ -1,7 +1,5 @@
 /* MAIN.CSS */
 
-
-
 .content{
 	width: 100%;
 	min-width: 100%;
@@ -21,9 +19,8 @@
 }
 
 .github-buttons {
-	text-align: center;
-	margin-right: auto;
-	margin-left: auto;
+	align-content: right;
+	float: right;
 }
 
 .footer{

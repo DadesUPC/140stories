@@ -8,15 +8,18 @@
 		<form action="/newstory/" method="post" id="newstory_form">
 			<div class="six columns column">
 				<!--<label for="title">Story title:</label>!-->
-				<input class="u-full-width" name="title" type="text" placeholder="The tale of Sir Francis Drake" maxlength="60" spellcheck="false" required>
+				<input class="u-full-width" name="title" type="text" placeholder="The tale of Sir Francis Drake" maxlength="60" spellcheck="false" autocomplete="off" required>
 				<br>
 				<!--<label for="tweet">Now, start your story:</label>!-->
 				<br>
-  				<textarea rows="10" charswidth="23" name="text" class="u-full-width" placeholder="Once upon a time..." id="text" maxlength="140" spellcheck="false" required></textarea>
-  				<br>
-				<input class="button-primary" type="submit" value="Submit">
+  				<textarea rows="10" charswidth="23" name="text" class="u-full-width" placeholder="Once upon a time..." id="tweet-box" maxlength="140" spellcheck="false" required></textarea>
+  				<div class="progress-bar">
+ 					<div class="progress-bar progress-bar-fill" id="progress-bar-fill"></div>
+				</div>
+				<input class="button-primary button-submit" type="submit" value="Submit">
 			</div>
 		</form>
+		<script type="text/javascript" src="../static/js/scrolling_bar.js"></script>
 		<div class="three columns"><p></p></div>
 	</div>
 </div>

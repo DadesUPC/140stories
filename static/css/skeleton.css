@@ -235,6 +235,9 @@ input[type="button"].button-primary:focus {
   background-color: #2FC481;
   border-color: #2FC481;
 }
+.button-primary.button-submit {
+  margin-top: 10px;
+}
 
 /* Forms
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -429,3 +432,17 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+/* Progress Bar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  height: 5px;
+  line-height: 30px;
+}
+.progress-bar.progress-bar-fill {
+  width: 0%;
+  background-color: #4CAF50;
+}

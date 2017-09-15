@@ -1,23 +1,31 @@
 /* MAIN.CSS */
 
-.content{
+html{
 	width: 100%;
-	min-width: 100%;
-	position: absolute;
+	height: 100%;
+	max-height: 100%;
+	min-height: 100%;
+}
+
+.container{
+	max-height: 99%;
+}
+
+.content{
 }
 
 @-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
 .header h2 {
-    border-right: .1em solid black;
-    width: 16.5em; 
+    border-right: .05em solid black;
+    width: 16em; 
     width: 12ch;
-    margin: 2em 1em;
+    margin: 0.5em 0.25em;
     white-space: nowrap;
     overflow: hidden;
-    -webkit-animation: typing 2s steps(12, end),
-               blink-caret .5s step-end infinite alternate;
+    -webkit-animation: typing 1s steps(12, end),
+               blink-caret 0.25s step-end infinite alternate;
 }
 
 .main-buttons{
@@ -37,9 +45,7 @@
 	float: right;
 }
 
-
 .footer{
-	margin-top: 30%;
-	margin-bottom: 0;
+	margin-top: 15%;
 	margin-right: 5%;
 }

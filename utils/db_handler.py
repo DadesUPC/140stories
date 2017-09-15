@@ -15,3 +15,7 @@ def createID(length = 6):
 			n += 97
 		ret = ret[:i] + str(chr(n)) + ret[i + 1:]
 	return ret
+
+def IDExists(id):
+	query = Story.query.get(id)
+	return (query==None)

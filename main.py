@@ -27,7 +27,6 @@ def newstory():
 	return render_template('newstory.html')
 
 
-
 @app.route('/continue/')
 def continueStory():
 	return render_template('continue.html')

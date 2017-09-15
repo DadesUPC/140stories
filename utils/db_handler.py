@@ -32,3 +32,20 @@ def addTextToStory(id, text):
 	story = Story.query.get(id)
 	story.full_text+=text
 	db.session.commit()
+
+def getAllStories():
+	stories = Story.query.all()
+	return stories
+
+def getRandomStory():
+	stories = getAllStories()
+	chosen_one = randint(0, len(stories)-1)
+	return stories[chosen_one]
+
+def getStoryByID(id):
+	story = Story.query.get(id)
+	return story
+
+def getStoryByStoryID(story_id):
+	story = Story.query.filter_by(story_id=story_id).first()
+	return story

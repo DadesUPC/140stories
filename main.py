@@ -36,5 +36,5 @@ def continueStory(id):
 		story = db_handler.getRandomStory()
 		return redirect('/continue/'+story.story_id+'/')
 	else:
-		story = db_handler.getStoryByID(id)
+		story = db_handler.getStoryByStoryID(id)
 	return render_template('continue.html', story=story)

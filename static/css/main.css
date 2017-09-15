@@ -6,6 +6,19 @@
 	position: absolute;
 }
 
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.header h2 {
+    border-right: .1em solid black;
+    width: 16.5em; 
+    width: 12ch;
+    margin: 2em 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: typing 2s steps(12, end),
+               blink-caret .5s step-end infinite alternate;
+}
 
 .main-buttons{
 	margin-top: 10%;

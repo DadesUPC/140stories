@@ -10,4 +10,4 @@ Collaborative stories
 
 ## Run
 
-` python3 run.pip `
+` python3 run.py `

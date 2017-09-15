@@ -6,12 +6,25 @@
   <link href='/static/css/skeleton.css' rel="stylesheet">
   <link href='/static/css/normalize.css' rel="stylesheet">
   <link href='/static/css/main.css' rel="stylesheet">
+  <link href='/static/css/fonts.css' rel="stylesheet">
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
 </head>
 
 <body>
   <div class="container" id="container">
-    {%block content%}
-    {%endblock%}     
+  	<br>
+  	<div class="header">
+  		<h2>140 Stories</h2>
+  	</div>
+  	<div class="content">
+    	{%block content%}
+   	 	{%endblock%}
+   	</div>    
+  </div>
+  <div class="footer">
+  	<pre align="right">A project by <a href="twitter.com/ocuatrecasas">Oscar CuatreCasas</a> and <a href="twitter.com/PolBaladas/">Pol Baladas</a></pre>
+  	<pre align="right">Data Science students at <a href="https://twitter.com/dseupc">dseupc</a></pre>
   </div>
 </body>
 

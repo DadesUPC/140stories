@@ -1,1 +1,33 @@
 /* MAIN.CSS */
+
+
+
+.content{
+	width: 100%;
+	min-width: 100%;
+	position: absolute;
+}
+
+.main-buttons{
+	margin-top: 10%;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.main-buttons button{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+.github-buttons {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.footer{
+	margin-top: 30%;
+	margin-bottom: 0;
+	margin-right: 5%;
+}

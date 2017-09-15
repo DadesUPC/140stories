@@ -3,7 +3,21 @@
 {% block content %}
 <div class="row">
 	<div class="12 columns">
-		
+		<p align=middle><pre align=middle>Start a new story</pre></p>
+		<div class="three columns"><p></p></div>
+		<form action="/newstory/" method=post"" id="newstory_form">
+			<div class="six columns column">
+				<!--<label for="title">Story title:</label>!-->
+				<input class="u-full-width" type="text" placeholder="Title Here  -_-">
+				<br>
+				<!--<label for="tweet">Now, start your story:</label>!-->
+				<br>
+  				<textarea rows="10" charswidth="23" class="u-full-width" placeholder="Once upon a time..." id="text"></textarea>
+  				<br>
+				<input class="button-primary" type="submit" value="Submit">
+			</div>
+		</form>
+		<div class="three columns"><p></p></div>
 	</div>
 </div>
 {% endblock %}

@@ -12,6 +12,10 @@
 			<div align=middle id="story_container">
 				<p align=middle><pre class="section-title" align=middle>{{story.title}}</pre></p>
 				<p id="full_text">{{story.full_text}}</p>
+				<div class="share">
+				{%include 'social.html'%}
+			</div>
+			<br>
 			</div>
 			<form action="/add/{{story.story_id}}/" method="post" id="add_form">
 				<label for="tweet">Add your own ideas:</label>
@@ -21,10 +25,6 @@
 				</div>
 				<input class="button-primary button-submit" type="submit" value="Submit">
 			</form>
-
-			<div class="share">
-				{%include 'social.html'%}
-			</div>
 
 		</div>
 		

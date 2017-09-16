@@ -1,0 +1,1 @@
+app_url = "https://140stories.com"

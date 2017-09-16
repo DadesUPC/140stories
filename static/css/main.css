@@ -60,6 +60,20 @@ html{
 	
 }
 
+#add_form textarea{
+	resize: none;
+	height: auto;
+}
+
+#add_form input[type="submit"]{
+	float: right;
+	
+}
+
+#story_container p{
+	text-align: justify;
+}
+
 
 .footer{
 	margin-top: 15%;

@@ -1,10 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+
 <div class="row">
 	<div class="12 columns">
-		<p>{{story.title}}</p>
-		<p>{{story.full_text}}</p>
+
+		<div class="two columns"><p></p></div>
+		
+		<div class="eight columns column">
+			<div align=middle id="story_container">
+				<p align=middle><pre class="section-title" align=middle>{{story.title}}</pre></p>
+				<p>{{story.full_text}}</p>
+			</div>
+			<form action="/add/{{story.story_id}}" method="post" id="add_form">
+				<label for="tweet">Add your own ideas:</label>
+  				<textarea rows="10" charswidth="23" name="text" class="u-full-width" placeholder="Once upon a time..." id="tweet-box" maxlength="140" spellcheck="false" required></textarea>
+  				<div class="progress-bar">
+ 					<div class="progress-bar progress-bar-fill" id="progress-bar-fill"></div>
+				</div>
+				<input class="button-primary button-submit" type="submit" value="Submit">
+			</form>
+		</div>
+		
+		<script type="text/javascript" src="/static/js/scrolling_bar.js"></script>
+		
+		<div class="two columns"><p></p></div>
 
 	</div>
 </div>

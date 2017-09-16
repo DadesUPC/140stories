@@ -25,8 +25,8 @@ def newstory():
 	if request.method=='POST':
 		title = request.form['title']
 		text = request.form['text']
-		db_handler.newStory(title, text)
-		return render_template('index.html')
+		story_id = db_handler.newStory(title, text)
+		return redirect('/continue/'+story_id+'/')
 	return render_template('newstory.html')
 
 @app.route('/continue/<id>/')

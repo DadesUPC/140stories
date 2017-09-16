@@ -27,6 +27,7 @@ def newStory(title, text):
 	story = Story(title, text, story_id)
 	db.session.add(story)
 	db.session.commit()
+	return story_id
 
 def addTextToStory(id, text):
 	story = Story.query.get(id)

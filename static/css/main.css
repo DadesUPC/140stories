@@ -9,6 +9,11 @@ html{
 .content{
 }
 
+
+pre {
+	white-space:pre-wrap
+}
+
 .header a{
 	text-decoration: none;
 	color: inherit;

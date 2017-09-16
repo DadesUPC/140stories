@@ -49,3 +49,17 @@ def getStoryByID(id):
 def getStoryByStoryID(story_id):
 	story = Story.query.filter_by(story_id=story_id).first()
 	return story
+
+def newTweet(text, story_id):
+	tweet = Tweet(text, story_id)
+	addTweetToStory(tweet)
+	db.session.add(tweet)
+	db.session.commit()
+
+
+def addTweetToStory(tweet):
+	story = Story.query.filter_by(story_id=tweet.parent_story_id).first()
+	story.full_text+=tweet.text
+	db.session.commit()
+
+

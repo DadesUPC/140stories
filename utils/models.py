@@ -13,8 +13,10 @@ class Story(db.Model):
 		self.story_id = story_id
 
 class Tweet(db.Model):
-	id = db.Column(db.Integer, primary_key=True)
+	id = db.Column(db.Integer, primary_key=True, autoincrement=True)
 	text = db.Column(db.String(140))
+	parent_story_id = db.Column(db.Text)
 
-	def __init__(self, text):
+	def __init__(self, text, parent):
 		self.text = text
+		self.parent_story_id = parent

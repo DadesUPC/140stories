@@ -38,3 +38,11 @@ def continueStory(id):
 	else:
 		story = db_handler.getStoryByStoryID(id)
 	return render_template('continue.html', story=story)
+
+
+@app.route('/add/<id>/', methods=['POST'])
+def addToStory(id):
+	text = request.form['text']
+	db_handler.newTweet(text, id)
+	return redirect('/continue/'+id+'/')
+

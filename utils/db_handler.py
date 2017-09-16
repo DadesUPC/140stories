@@ -30,7 +30,7 @@ def newStory(title, text):
 
 def addTextToStory(id, text):
 	story = Story.query.get(id)
-	story.full_text+=text
+	story.full_text+=(' '+text)
 	db.session.commit()
 
 def getAllStories():
@@ -59,7 +59,7 @@ def newTweet(text, story_id):
 
 def addTweetToStory(tweet):
 	story = Story.query.filter_by(story_id=tweet.parent_story_id).first()
-	story.full_text+=tweet.text
+	story.full_text+=(' '+tweet.text)
 	db.session.commit()
 
 

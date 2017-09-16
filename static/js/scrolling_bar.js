@@ -8,13 +8,11 @@ function tweetProgressBar() {
   bar.style.width = width + '%';
   
   /* GRADIENT HUE */
-  /*
   //hue = 78 - 0.0078 * Math.pow(width, 2);
-  hue = 78 - Math.pow(1.04453, width);
-  bar.style.backgroundColor = "hsl(" + hue + ",38.4%,47.2%)";
-  */
+  //hue = Math.pow(1.04453, width);
+  //hue = 780000 * Math.pow(width, -2);
+  //bar.style.backgroundColor = "hsl(" + hue + ",38.4%,47.2%)";
   /* NO HUE */
-  
   if (width == 100)
   {
     bar.style.backgroundColor = "#AF2C30";
@@ -23,7 +21,6 @@ function tweetProgressBar() {
   {
     bar.style.backgroundColor = "#4CAF50";
   }
-  
 }
 
 document.getElementById("tweet-box").oninput = function () {tweetProgressBar()};

@@ -11,7 +11,7 @@ html{
 
 
 pre {
-	white-space:pre-wrap
+	white-space:pre-wrap;
 	word-wrap: break-word;
 }
 
@@ -76,7 +76,9 @@ pre {
 	
 }
 
-#story_container p{
+#full_text{
+	word-wrap: break-word;
+	white-space: pre-wrap;
 	text-align: justify;
 }
 

@@ -236,7 +236,8 @@ input[type="button"].button-primary:focus {
   border-color: #2FC481;
 }
 .button-primary.button-submit {
-  margin-top: 10px;
+  margin-top: 8%;
+  position: relative;
 }
 
 /* Forms
@@ -445,4 +446,74 @@ there.
 .progress-bar.progress-bar-fill {
   width: 0%;
   background-color: #4CAF50;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display:none;
+  text-align: right;
+  text-anchor: 
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #E05353;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider-text {
+  position: relative;
+  text-align: right;
+  float: middle;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: -2px;
+  bottom: -2px;
+  background-color: #E4E4E4;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #32D18E;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #32D18E;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

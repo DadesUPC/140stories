@@ -73,7 +73,11 @@ pre {
 
 #add_form input[type="submit"]{
 	float: right;
-	
+}
+
+#markdown_supported{
+	margin-bottom: 0;
+	margin-right: 0;
 }
 
 #full_text{

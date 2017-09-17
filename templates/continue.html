@@ -10,7 +10,7 @@
 		
 		<div class="eight columns column">
 			<div align=middle id="story_container">
-				<p align=middle><pre class="section-title" align=middle>{{story.title}}</pre></p>
+				<p align=middle><pre class="section-title" id="title" align=middle>{{story.title}}</pre></p>
 				<p id="full_text">{{story.full_text}}</p>
 				<div class="share">
 				{%include 'social.html'%}
@@ -29,6 +29,13 @@
 		</div>
 		
 		<script type="text/javascript" src="/static/js/scrolling_bar.js"></script>
+		<script type="text/javascript" src="/static/js/micromarkdown.min.js"></script>
+		<script type="text/javascript">
+			window.onload = function markdown(){
+				var text = document.getElementById('full_text')
+				text.innerHTML = micromarkdown.parse(text.innerHTML);
+			}
+		</script>
 
 		<div class="two columns"><p></p></div>
 

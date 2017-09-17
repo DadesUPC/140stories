@@ -82,6 +82,14 @@ pre {
 	text-align: justify;
 }
 
+#full_text h1{font-size: 2em;}
+#full_text h2{font-size: 1.5em;}
+#full_text h3{font-size: 1.17em;}
+#full_text h4{font-size: 1em;}
+#full_text h5{font-size: 1em;}
+
+
+
 
 .footer{
 	margin-top: 15%;

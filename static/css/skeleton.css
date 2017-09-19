@@ -450,7 +450,7 @@ there.
 
 /* The switch - the box around the slider */
 .switch {
-  float: right;
+  float: left;
   position: relative;
   display: inline-block;
   width: 36px;
@@ -479,8 +479,10 @@ there.
 
 .slider-text {
   position: relative;
-  text-align: right;
-  float: middle;
+  text-align: left;
+  float: left;
+  margin-right: 2%;
+  bottom: +4px;
 }
 
 .slider:before {

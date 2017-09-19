@@ -188,3 +188,16 @@ background-color: #FF6600
   background-color: #FB6200;
   border-color: #FB6200;
 }
+
+
+
+.resp-sharing-button--email {
+  background-color: #777777;
+  border-color: #777777;
+}
+
+.resp-sharing-button--email:hover,
+.resp-sharing-button--email:active {
+  background-color: #5e5e5e;
+  border-color: #5e5e5e;
+}

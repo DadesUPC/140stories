@@ -46,3 +46,5 @@ def addToStory(id):
 	db_handler.newTweet(text, id)
 	return redirect('/continue/'+id+'/')
 
+
+

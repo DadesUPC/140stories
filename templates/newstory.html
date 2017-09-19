@@ -28,6 +28,15 @@
 			</div>
 		</form>
 		<script type="text/javascript" src="../static/js/scrolling_bar.js"></script>
+		
+		<script type="text/javascript" src="/static/js/micromarkdown.min.js"></script>
+		<script type="text/javascript">
+			window.onload = function markdown(){
+				var text = document.getElementById('full_text')
+				text.innerHTML = micromarkdown.parse(text.innerHTML);
+			}
+		</script>
+
 		<div class="three columns"><p></p></div>
 	</div>
 </div>

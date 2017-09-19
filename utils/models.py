@@ -8,11 +8,13 @@ class Story(db.Model):
 	title = db.Column(db.Text)
 	full_text = db.Column(db.Text)
 	url = db.Column(db.Text)
+	private = db.Column(db.Boolean, default=False)
 
-	def __init__(self, title, text, story_id):
+	def __init__(self, title, text, story_id, private):
 		self.title = title
 		self.full_text = text
 		self.story_id = story_id
+		self.private = private
 		self.url = app_url+'/continue/'+story_id+'/'
 
 class Tweet(db.Model):

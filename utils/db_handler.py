@@ -22,9 +22,9 @@ def createID(length = 6):
 	return ret
 
 
-def newStory(title, text):
+def newStory(title, text, private):
 	story_id = createID()
-	story = Story(title, text, story_id)
+	story = Story(title, text, story_id, private)
 	db.session.add(story)
 	db.session.commit()
 	return story_id
@@ -38,8 +38,12 @@ def getAllStories():
 	stories = Story.query.all()
 	return stories
 
+def getAllPublicStories():
+	stories = Story.query.filter_by(private=False).all()
+	return stories
+
 def getRandomStory():
-	stories = getAllStories()
+	stories = getAllPublicStories()
 	chosen_one = randint(0, len(stories)-1)
 	return stories[chosen_one]
 

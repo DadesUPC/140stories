@@ -15,6 +15,11 @@
 				<div class="share">
 				<br>
 				{%include 'social.html'%}
+				{%if story.private%}
+				<br>
+				<br>
+				⚠️ This is a private story, only accessible by direct link<a href="{{story.url}}">	{{story.url}}</a>
+				{%endif%}
 			</div>
 			<br>
 			</div>
@@ -25,9 +30,9 @@
  					<div class="progress-bar progress-bar-fill" id="progress-bar-fill"></div>
 				</div>
 				<input class="button-primary button-submit" type="submit" value="Submit">
-				<p><a target="_blank" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Syntax</a> supported</p>
+				<p id="markdown_supported"><a target="_blank" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Syntax</a> supported ( and <a href="http://getemoji.com/">emoji</a>! )</p>
 			</form>
-
+			<br>
 		</div>
 		
 		<script type="text/javascript" src="/static/js/scrolling_bar.js"></script>

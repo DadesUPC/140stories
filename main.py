@@ -23,9 +23,11 @@ def home():
 @app.route('/newstory/', methods=['GET', 'POST'])
 def newstory():
 	if request.method=='POST':
+		private = False
+		if 'private' in request.form.values(): private = True
 		title = request.form['title']
 		text = request.form['text']
-		story_id = db_handler.newStory(title, text)
+		story_id = db_handler.newStory(title, text, private)
 		return redirect('/continue/'+story_id+'/')
 	return render_template('newstory.html')
 

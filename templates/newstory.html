@@ -19,23 +19,15 @@
 				
 				<input class="button-primary button-submit" type="submit" value="Submit">
 
-				<p id="markdown_supported"><a target="_blank" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Syntax</a> supported</p>
-				<p class="slider-text">Private Story? </p>
+				<p id="markdown_supported"><a target="_blank" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Syntax</a> supported ( and <a href="http://getemoji.com/">emoji</a>! )</p>
+				<p class="slider-text">Private Story?</p>
 				<label class="switch">
-					<input type="checkbox"><span class="slider round"></span>
+					<input type="checkbox" name="private" id="private" value="private"><span class="slider round"></span>
 				</label>
 			
 			</div>
 		</form>
 		<script type="text/javascript" src="../static/js/scrolling_bar.js"></script>
-		
-		<script type="text/javascript" src="/static/js/micromarkdown.min.js"></script>
-		<script type="text/javascript">
-			window.onload = function markdown(){
-				var text = document.getElementById('full_text')
-				text.innerHTML = micromarkdown.parse(text.innerHTML);
-			}
-		</script>
 
 		<div class="three columns"><p></p></div>
 	</div>

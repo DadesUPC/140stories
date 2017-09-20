@@ -48,5 +48,9 @@ def addToStory(id):
 	db_handler.newTweet(text, id)
 	return redirect('/continue/'+id+'/')
 
+@app.errorhandler(404)
+def page_not_found(e):
+	return (render_template('notfound.html'))
+
 
 

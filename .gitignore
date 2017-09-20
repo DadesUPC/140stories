@@ -1,2 +1,5 @@
 env/
 utils/config.py
+*.pyc
+__pycache__/
+*.db

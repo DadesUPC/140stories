@@ -1,1 +1,1 @@
-app_url = "https://140stories.com"
+app_url = "https://140stori.es"

@@ -1,0 +1,6 @@
+env/
+utils/config.py
+database.db
+*.pyc
+__pychache__/
+migrations/

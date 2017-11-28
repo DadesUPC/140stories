@@ -26,17 +26,17 @@ def newstory():
     if request.method == 'POST':
         title = request.form['title']
         text = request.form['text']
-        if len(text) > 141:
-            return render_template('fuckyou.html')
+        if len(text) > 140:
+            return render_template('fuckyou.html', err=values.max_exceeded)
         story_id = db_handler.newStory(title, text)
         return redirect('/continue/' + story_id + '/')
-    return render_template('newstory.html')
+    else: 
+        return render_template('newstory.html')
 
 
 @app.route('/continue/<id>/')
 def continueStory(id):
     if id == '0':
-        print("0")
         story = db_handler.getRandomStory()
         return redirect('/continue/' + story.story_id + '/')
     else:
@@ -48,8 +48,8 @@ def continueStory(id):
 def addToStory(id):
     text = request.form['text']
     print(text)
-    if len(text) > 141:
-        return render_template('fuckyou.html')
+    if len(text) > 140:
+        return render_template('fuckyou.html', err=values.max_exceeded)
     db_handler.newTweet(text, id)
     return redirect('/continue/' + id + '/')
 

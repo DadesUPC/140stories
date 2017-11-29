@@ -26,8 +26,15 @@ def newstory():
     if request.method == 'POST':
         title = request.form['title']
         text = request.form['text']
+        captcha = reques.form['g-recaptcha-response']
+        captcha_check = db_handler.checkCaptcha(captcha)
+        
         if len(text) > 140:
             return render_template('fuckyou.html', err=values.max_exceeded)
+        
+        if captcha_check is False:
+            return render_template('fuckyou.html', err=wrong_captcha)
+
         story_id = db_handler.newStory(title, text)
         return redirect('/continue/' + story_id + '/')
     else: 

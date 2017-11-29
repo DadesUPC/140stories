@@ -3,6 +3,7 @@ from random import randint
 from main import app, db
 from .models import *
 from .values import *
+import requests
 
 
 def IDExists(id):
@@ -74,3 +75,17 @@ def addTweetToStory(tweet):
     story = Story.query.filter_by(story_id=tweet.parent_story_id).first()
     story.full_text += (' ' + tweet.text)
     db.session.commit()
+
+
+
+def checkCaptcha(captcha):
+    r = requests.post(captcha_url, data={
+        'secret': captcha_secret,
+        'response': captcha
+    })
+    print(r.json())
+    if r.status_code==200:
+        return bool(r.json()['success'])
+    else:
+        app.logger.info(r.status_code)
+        return False

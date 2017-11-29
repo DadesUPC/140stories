@@ -4,3 +4,4 @@ database.db
 *.pyc
 __pychache__/
 migrations/
+utils/values.py

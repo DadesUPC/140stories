@@ -22,18 +22,9 @@
 			</div>
 			<br>
 			</div>
-			<form action="/add/{{story.story_id}}/" method="post" id="add_form">
-				<label for="tweet">Add your own ideas:</label>
-  				<textarea rows="10" charswidth="23" name="text" class="u-full-width" placeholder="Once upon a time..." id="tweet-box" maxlength="140" spellcheck="false" required></textarea>
-  				<div class="progress-bar">
- 					<div class="progress-bar progress-bar-fill" id="progress-bar-fill"></div>
-				</div>
-				<input class="button-primary button-submit" type="submit" value="Submit">
-				<!--<p id="markdown_supported"><a target="_blank" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Syntax</a> supported ( and <a a target="_blank" href="http://getemoji.com/">emoji</a>! )</p>-->
-			</form>
+			{%include 'comments.html'%}	
 			<br>
-		</div>
-		
+		</div>		
 		<script type="text/javascript" src="/static/js/scrolling_bar.js"></script>
 		<!--<script type="text/javascript" src="/static/js/micromarkdown.min.js"></script>
 		<script type="text/javascript">

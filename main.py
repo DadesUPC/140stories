@@ -33,7 +33,7 @@ def newstory():
             return render_template('fuckyou.html', err=values.max_exceeded)
         
         if captcha_check is False:
-            return render_template('fuckyou.html', err=values.wrong_captcha)
+            return render_template('wrongcaptcha.html', err=values.wrong_captcha)
 
         story_id = db_handler.newStory(title, text)
         return redirect('/continue/' + story_id + '/')

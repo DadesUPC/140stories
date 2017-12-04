@@ -101,3 +101,33 @@ pre {
 	margin-right: 1%;
 	margin-left: 1%;
 }
+
+.upvote-wrapper {
+	text-align: middle;
+	padding-top: 12px;
+}
+
+.upvote-count {
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 0.9em;
+	margin-top: 8px;
+	color: black;
+}
+
+.upvote-symbol {
+	font-size: 1.1em;
+	color: red;
+}
+
+.comment-content {
+	padding-top: 6px;
+	border-left: 1px solid #E0E0E0;
+	margin-left: 0px;
+	padding-left: 10px;
+	padding-bottom: 6px;
+}
+
+.comment-parent {
+	margin-left: -25%;
+	margin-right: -25%;
+}
